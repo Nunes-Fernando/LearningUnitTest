@@ -16,6 +16,19 @@ public class CalculadoraTest {
 	public void assertivas() {
 		Assertions.assertEquals("Casa", "Casa");
 		Assertions.assertNotEquals("Casa", "casa");
-		
+	}
+	
+	@Test
+	public void retornoInteiro() {
+		Calculadora calc  = new Calculadora();
+		float resultado = calc.dividir(4, 2);
+		Assertions.assertEquals(resultado, 2);  
+	}
+	
+	@Test
+	public void retornaNumerosNegativos() {
+		Calculadora calc  = new Calculadora();
+		float resultado = calc.dividir(6, -2);
+		Assertions.assertEquals(resultado, -3);  
 	}
 }
